@@ -1,0 +1,116 @@
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+form {
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+    border-radius: 5px;
+}
+
+select, input[type="checkbox"] {
+    margin: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+}
+
+.fs-4 {
+  font-family: "Lobster", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nav-item {
+    margin: 15px;
+    padding: 0px;
+    background-color: none;
+    border-radius: 5px;
+}
+
+.display-4 {
+  font-family: "Lobster", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.open-san {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+footer {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.text-left{
+    text-align: left;
+}

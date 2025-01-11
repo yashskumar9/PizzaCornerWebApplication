@@ -1,0 +1,7 @@
+id,pizza,toppings,beverage,sub_total,tax,total
+1,Veggie Masala Pizza(Veg),"[""Extra Cheese"", ""Onions""]",Coca Cola Can,10.75,1.075,11.825
+2,Spicy Fish Pizza,"[""Bacon"", ""Sausage""]",Pet Coca-Cola,11.68,1.168,12.848
+3,Chilli Chicken Pizza,[],Pet Fanta Orange,8.61,0.861,9.471
+4,None,[],1.5L Sprite,1.43,0.143,1.573
+5,Cheesy Onion with Green Chilli(Veg),"[""Extra Cheese"", ""Onions"", ""Green Peppers""]",Coke Zero 400ml,11.08,1.108,12.188
+6,Chicken Bacon & Potato,"[""Extra Cheese"", ""Bacon"", ""Sausage""]",Mineral Water,12.5,1.25,13.75

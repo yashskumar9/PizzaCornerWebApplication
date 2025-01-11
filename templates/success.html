@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Pizza Corner{% endblock %}
+
+{% block content %}
+<div class="container my-4 text-center">
+    <h1 class="display-4">Process Success</h1>
+    <p class="lead">E-receipt sent successfully </p>
+    <hr class="my-4">
+    <a href="{{ url_for('add_site') }}" class="btn btn-dark btn-lg">Place Another Order</a>
+    <a href="{{ url_for('home') }}" class="btn btn-success btn-lg">Done</a>
+</div>
+
+{% endblock %}
+# one font display-4, the other font fs-4
+
+
+
+
+
+
+
+
+
+
+
+

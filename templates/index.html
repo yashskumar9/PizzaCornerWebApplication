@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %}Pizza Corner{% endblock %}
+
+{% block content %}
+
+<div class="container my-5 text-center">
+    <h1 class="display-4">🍕 Pizza Menu 🍕</h1>
+    <h2 class="text-secondary mb-5 text-center">Build your perfect pizza with your favorite toppings and beverages</h2>
+
+    <form action="{{ url_for('add_to_cart') }}" method="POST" class="text-start">
+        <div class="container my-5">
+            <div class="mb-4 d-flex align-items-center">
+                <label for="pizza" class="form-label fs-5 me-3">Pizza Type:</label>
+                <select name="pizza" id="pizza" class="form-select w-auto">
+                    <option value="Select">Select</option>
+                    <option value="Veggie Masala Pizza(Veg)">Veggie Masala Pizza(Veg) - $8</option>
+                    <option value="Cheesy Onion with Green Chilli(Veg)">Cheesy Onion with Green Chilli Pizza(Veg) - $8</option>
+                    <option value="Cheesy Tomato with Green Chilli(Veg)">Cheesy Tomato with Green Chilli Pizza(Veg) - $8</option>
+                    <option value="Spicy Fish Pizza">Spicy Fish Pizza - $8</option>
+                    <option value="Chilli Chicken Pizza">Chilli Chicken Pizza - $8</option>
+                    <option value="Sausage Delight">Sausage Delight - $8</option>
+                    <option value="Chicken Bacon & Potato">Chicken Bacon & Potato Pizza - $8</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fs-5">Toppings:</label>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Extra Cheese" class="form-check-input me-2" id="extraCheese">
+                            <label class="form-check-label" for="extraCheese">Extra Cheese - $1</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Pepperoni" class="form-check-input me-2" id="pepperoni">
+                            <label class="form-check-label" for="pepperoni">Pepperoni - $1.50</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Mushrooms" class="form-check-input" id="mushrooms">
+                            <label class="form-check-label" for="mushrooms">Mushrooms - $1</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Olives" class="form-check-input" id="olives">
+                            <label class="form-check-label" for="olives">Olives - $1</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Onions" class="form-check-input" id="onions">
+                            <label class="form-check-label" for="onions">Onions - $0.75</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Green Peppers" class="form-check-input" id="greenPeppers">
+                            <label class="form-check-label" for="greenPeppers">Green Peppers - $0.75</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Bacon" class="form-check-input" id="bacon">
+                            <label class="form-check-label" for="bacon">Bacon - $1.50</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Pineapple" class="form-check-input" id="pineapple">
+                            <label class="form-check-label" for="pineapple">Pineapple - $1</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check d-flex align-items-center">
+                            <input type="checkbox" name="toppings" value="Sausage" class="form-check-input" id="sausage">
+                            <label class="form-check-label" for="sausage">Sausage - $1.50</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mb-4 d-flex align-items-center">
+                <label for="beverage" class="form-label fs-5 me-3 ">Beverage:</label>
+                <select name="beverage" id="beverage" class="form-select w-auto">
+                    <option value="Select">Select</option>
+                    <option value="Coca Cola Can">Coca Cola Can - $1.00</option>
+                    <option value="Pet Coca-Cola">Pet Coca-Cola - $0.68</option>
+                    <option value="Pet Sprite">Pet Sprite - $0.61</option>
+                    <option value="Pet Fanta Orange">Pet Fanta Orange - $0.61</option>
+                    <option value="Coke Zero 400ml">Coke Zero 400ml - $0.58</option>
+                    <option value="1.5L Coca-Cola">1.5L Coca-Cola - $1.53</option>
+                    <option value="1.5L Sprite">1.5L Sprite - $1.43</option>
+                    <option value="Mineral Water">Mineral Water - $0.50</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Add to Cart</button>
+        </div>
+    </form>
+
+    <br>
+    <a href="{{ url_for('cart') }}" class="btn btn-secondary">View Cart</a>
+</div>
+{% endblock %}

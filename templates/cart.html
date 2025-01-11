@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %} Your Cart {% endblock %}
+
+{% block content %}
+
+<div class="container my-3 text-center">
+    <div class="text-center mb-3">
+        <h1 class="display-4">Your Cart</h1>
+    </div>
+
+        {% if total != 0 %}
+            <div class="container my-4">
+                <div class="mb-4">
+                    <h2 class="text-secondary mb-4 text-center">Items in Your Cart</h2>
+                    <ul class="list-group">
+                        {% for item in cart %}
+                        <li class="list-group-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="text-align: left; flex:1;">
+                                    {% if item.pizza and item.pizza != 'Select': %}
+                                        <strong>{{ item.pizza }}</strong> - ${{ item.price }}
+                                        {% if item.toppings %}
+                                            <div class="text-muted">Toppings: {{ ', '.join(item.toppings) }}</div>
+                                        {% endif %}
+                                        {% if item.beverage and item.beverage != 'Select' %}
+                                            <div class="text-muted">Beverage: {{ item.beverage }}</div>
+                                        {% endif %}
+                                    {% elif item.beverage and item.beverage != 'Select': %}
+                                        <strong>{{ item.beverage }}</strong> - ${{ item.price }}
+                                        {% if item.toppings %}
+                                            <div class="text-muted">Toppings: {{ ', '.join(item.toppings) }}</div>
+                                        {% endif %}
+                                    {% else %}
+                                            <strong>Toppings: {{ ', '.join(item.toppings) }}</strong> - ${{ item.price }}
+                                    {% endif %}
+                                </div>
+                                <form action="{{ url_for('delete_item', index=item.id) }}" method="POST" style="margin: 0;"><!-- Pass the 0-based index to the delete route -->
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">Total: ${{ total }}</h3>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('add_site') }}" class="btn btn-secondary">Add More Items</a>
+                </div>
+            </div>
+            <form action="{{ url_for('finalize_order') }}" method="POST" class="text-center">
+                <button type="submit" class="btn btn-success btn-lg">Finalize Order</button>
+            </form>
+        {% else %}
+            <h2 class="text-center text-danger">Cart is Empty!</h2>
+            <div class="text-center mt-4">
+                <a href="{{ url_for('add_site') }}" class="btn btn-dark">Add Items</a>
+            </div>
+        {% endif %}
+</div>
+
+{% endblock %}

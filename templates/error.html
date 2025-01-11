@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Pizza Corner{% endblock %}
+
+{% block content %}
+<div class="container my-4 text-center">
+    <h1 class="display-4">Receipt</h1>
+    <p class="lead">Your cart is empty! </p>
+    <hr class="my-4">
+    <p>Add items to enjoy your favourite pizzas!</p>
+    <a class="btn btn-warning btn-lg" href="{{ url_for('add_site') }}" role="button">Order Now</a>
+</div>
+
+{% endblock %}
+# one font display-4, the other font fs-4
+
+
+
+
+
+
+
+
+
+
+
+

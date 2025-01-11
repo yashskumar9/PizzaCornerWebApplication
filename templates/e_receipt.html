@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}E-Receipt{% endblock %}
+
+{% block content %}
+<div class="container my-5 text-center">
+    <h1 class="display-4">E-Receipt</h1>
+    <h2 class="lead">Enter your email ID to send the e-receipt.</h2>
+    <hr class="my-4">
+
+    <form action="{{ url_for('generate_receipt') }}" method="POST" class="text-start mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+            <label for="email" class="form-label fs-5">Email Address:</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required>
+        </div>
+        <button type="submit" class="btn btn-dark btn-lg">Send E-Receipt</button>
+    </form>
+</div>
+{% endblock %}
