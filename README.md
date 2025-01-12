@@ -5,7 +5,7 @@ A dynamic web application developed to enhance the operations of Pizza Corner, a
 
 <p align="center">
     <a>
-    <img src="https://github.com/user-attachments/assets/2aa23281-3df2-46d7-adcc-6fcb34442dc7" width="150" height="150"/>
+    <img src="https://github.com/user-attachments/assets/2aa23281-3df2-46d7-adcc-6fcb34442dc7" width="170" height="170"/>
     </a>
 </p>
 
